@@ -15,6 +15,34 @@
       "when": 1723015414240,
       "tag": "0001_condemned_madame_web",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1723535062341,
+      "tag": "0002_mixed_northstar",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1723537199555,
+      "tag": "0003_deep_hiroim",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1723538482948,
+      "tag": "0004_ambiguous_the_initiative",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1723628099407,
+      "tag": "0005_flowery_lily_hollister",
+      "breakpoints": true
     }
   ]
 }
