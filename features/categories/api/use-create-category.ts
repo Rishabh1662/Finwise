@@ -1,10 +1,10 @@
 import { InferRequestType, InferResponseType } from "hono";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { toast } from "sonner";
-import { client } from "@/lib/hono";
-import { Type } from "lucide-react";
 
+import { client } from "@/lib/hono";
+import { toast } from "sonner";
 type ResponseType = InferResponseType<typeof client.api.categories.$post>;
+
 type RequestType = InferRequestType<typeof client.api.categories.$post>["json"];
 
 export const useCreateCategory = () => {
@@ -20,7 +20,7 @@ export const useCreateCategory = () => {
       queryClient.invalidateQueries({ queryKey: ["categories"] });
     },
     onError: () => {
-      toast.error("Failed to create Category");
+      toast.error("Failed to create category");
     },
   });
   return mutation;

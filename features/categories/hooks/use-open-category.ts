@@ -1,13 +1,12 @@
 import { create } from "zustand";
 
-type OpenCategoryState = {
+type OpenCategorytState = {
   id?: string;
-  isOpen: Boolean;
+  isOpen: boolean;
   onOpen: (id: string) => void;
   onClose: () => void;
 };
-
-export const useOpenCategory = create<OpenCategoryState>((set) => ({
+export const useOpenCategory = create<OpenCategorytState>((set) => ({
   id: undefined,
   isOpen: false,
   onOpen: (id: string) => set({ isOpen: true, id }),

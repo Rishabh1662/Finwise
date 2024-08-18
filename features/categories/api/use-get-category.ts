@@ -1,6 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
-
 import { client } from "@/lib/hono";
+import { useQuery } from "@tanstack/react-query";
 
 export const useGetCategory = (id?: string) => {
   const query = useQuery({
@@ -11,9 +10,7 @@ export const useGetCategory = (id?: string) => {
         param: { id },
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch category");
-      }
+      if (!response.ok) throw new Error("Failed to fetch categories.");
 
       const { data } = await response.json();
       return data;

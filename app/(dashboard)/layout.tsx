@@ -1,21 +1,17 @@
-import { Header } from "@/components/header";
-import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
-
-import { QueryProvider } from "@/providers/query-provider";
+import { Header } from '@/components/header';
+import React from 'react'
 type Props = {
-  children: React.ReactNode;
-};
-
+    children: React.ReactNode;
+}
 const DashboardLayout = ({ children }: Props) => {
-  return (
-    <>
-      <Header />
-      <main className="px-3 lg:px-14">
-        <QueryProvider>{children}</QueryProvider>
-      </main>
-    </>
-  );
-};
+    return (
+        <>
+        <Header />
+        <main className='px-3 lg:px-14'>
+        {children}
+        </main>
+        </>
+    )
+}
 
-export default DashboardLayout;
+export default DashboardLayout

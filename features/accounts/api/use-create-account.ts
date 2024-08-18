@@ -1,10 +1,10 @@
 import { InferRequestType, InferResponseType } from "hono";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { toast } from "sonner";
-import { client } from "@/lib/hono";
-import { Type } from "lucide-react";
 
+import { client } from "@/lib/hono";
+import { toast } from "sonner";
 type ResponseType = InferResponseType<typeof client.api.accounts.$post>;
+
 type RequestType = InferRequestType<typeof client.api.accounts.$post>["json"];
 
 export const useCreateAccount = () => {
